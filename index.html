@@ -2,33 +2,78 @@
 <html lang="ja">
 
 <head>
-  <meta charset="UTF-8">
-  <title>駅模型</title>
+<meta charset="UTF-8">
+<title>駅模型</title>
 
-  <script type="module"
-    src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js">
-  </script>
+<script type="module"
+src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js">
+</script>
 
-  <style>
-    body {
-      margin: 0;
-      background: white;
-    }
+<style>
 
-    model-viewer {
-      width: 100vw;
-      height: 100vh;
-    }
-  </style>
+body {
+margin: 0;
+background: white;
+overflow: hidden;
+}
+
+model-viewer {
+width: 100vw;
+height: 100vh;
+}
+
+.hotspot {
+background: rgba(255,255,255,0.9);
+padding: 6px 10px;
+border-radius: 8px;
+font-family: sans-serif;
+font-size: 14px;
+border: none;
+cursor: pointer;
+box-shadow: 0 0 6px rgba(0,0,0,0.3);
+}
+
+</style>
 </head>
 
 <body>
 
 <model-viewer
-  src="howtomake JO13.glb"
-  camera-controls
-  auto-rotate
-  shadow-intensity="1">
+src="howtomake JO13.glb"
+camera-controls
+auto-rotate
+shadow-intensity="1"
+environment-image="neutral">
+
+<!-- V字 -->
+<button
+class="hotspot"
+slot="hotspot-1"
+data-position="81.658m -25.2286m 21.926m"
+data-normal="81.658m -25.2286m 21.926m">
+1 既存 屋根支え V字
+</button>
+
+<!-- 既存柱 -->
+<button
+class="hotspot"
+slot="hotspot-2"
+data-position="12.1707m -25.1851m 20.4232m"
+data-normal="12.1707m -25.1851m 20.4232m">
+2 既存柱
+</button>
+
+<!-- 既存 柱間梁 -->
+<button
+class="hotspot"
+slot="hotspot-3"
+data-position="62.2426m -25.1565m 21.6192m"
+data-normal="62.2426m -25.1565m 21.6192m">
+3 既存 柱間梁
+</button>
+
+
+
 </model-viewer>
 
 </body>
